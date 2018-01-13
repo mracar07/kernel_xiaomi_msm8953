@@ -403,8 +403,19 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
-		   -std=gnu89
+		   -Wno-bool-compare -Wno-logical-not-parentheses -Wno-incompatible-pointer-types \
+		   -Wno-tautological-compare -Wno-unused-const-variable \
+		   -Wno-misleading-indentation -Wno-format -fno-modulo-sched -Wno-multistatement-macros \
+		   -Wno-format-truncation -Wno-duplicate-decl-specifier -Wno-memset-elt-size -Wno-bool-operation -Wno-int-in-bool-context -Wno-parentheses -Wno-switch-unreachable -Wno-stringop-overflow -Wno-format-overflow \
+		   --param l1-cache-size=32 \
+		   --param l2-cache-size=2048 \
+		   --param l1-cache-line-size=64 \
+		   -std=gnu89 \
+		   -fno-asynchronous-unwind-tables \
+		   -mcpu=cortex-a53 -mtune=cortex-a53 -march=armv8-a+crc+crypto -mcpu=cortex-a53+crc+crypto \
 
+# Optimizations
+KBUILD_CFLAGS	+= -pipe -fno-pic -O3 -g0 -fivopts -finline-functions
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__

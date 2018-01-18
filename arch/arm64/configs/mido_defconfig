@@ -3921,6 +3921,7 @@ CONFIG_SENSORS_SSC=y
 # CONFIG_FIRMWARE_MEMMAP is not set
 CONFIG_DMIID=y
 # CONFIG_DMI_SYSFS is not set
+# CONFIG_FW_CACHE is not set
 
 #
 # EFI (Extensible Firmware Interface) Support
